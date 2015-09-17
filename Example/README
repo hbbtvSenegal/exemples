@@ -1,0 +1,6 @@
+Cette application est un exemple d'application TAL. C'est l'exemple détaillé sur le premier Billet sur TAL.
+Pour pouvoir demarrer cette application
+->vous lancez le fichier index.php avec votre server web
+->Oubien vous executer la commande node index.js (avec nodejs)
+
+L'idée de l'application consiste seulement a changer la couleur d'une zone en appuyant sur un des trois boutons ROUGE, JAUNE et BLEU.
