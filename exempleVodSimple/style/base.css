@@ -1,0 +1,446 @@
+
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: lighter;
+    color: #d4d4d4;
+    /*background-color: #1d1d1d; */
+}
+
+object {
+    position: absolute;
+}
+
+/* List widgets */
+.horizontallist, .verticallist {
+    position: relative;
+}
+
+.horizontallist .listitem {
+    display: inline-block;
+}
+
+/* nested lists - use #IDs instead for more complex layouts */
+.verticallist .horizontallist .listitem {
+    display: inline-block;
+}
+
+.verticallist .listitem {
+    display: block;
+    position: relative;
+}
+
+/* nested lists - use #IDs instead for more complex layouts */
+.horizontallist .verticallist .listitem {
+    display: block;
+}
+
+/* Horizontal carousel widgets */
+/* the mask is the top level of the carousel and defines where it is displayed and how much is visible */
+.horizontallistmask {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* ensure nested carousels have correct formatting, you may need to target IDs in complex layouts */
+.horizontallistmask .horizontallist .listitem {
+    display: inline-block;
+}
+
+.horizontalcarousel {
+    width: 99999px; /* needs to be big enough so carousel plus clones do not flow onto more then one line */
+}
+
+/* DEVICE SPECIFIC DEFAULTS EXAMPLE ------------------ */
+
+/* if you target some consoles you may need to add additional styles like this */
+.someConsoles .horizontallist .listitem {
+    display: inline-block;
+    float: left;
+}
+
+/* If you target some older tv models, you will need to specify
+initial element background in the base stylesheet, not in dynamically loaded styles. */
+
+.sometv.layout540p #app {
+    width: 960px;
+    height: 540px;
+    /*background-image: url(some/image/url_540.png); */
+}
+
+.sometv.layout720p #app {
+    width: 1280px;
+    height: 720px;
+    /*background-image: url(some/image/url_720.png); */
+}
+
+.sometv.layout1080p #app {
+    width: 1920px;
+    height: 1080px;
+    /*background-image: url(some/image/url_1080.png); */
+}
+
+/* SAMPLEAPP BASE STYLES */
+
+/* Core */
+
+/* Maple needs initial element background in base stylesheet... not in dynamically loaded styles! */
+.samsung.layout540p #app {
+    width: 960px;
+    height: 540px;
+    background-image: url(../img/bbc_background_540.png);
+    background-repeat: no-repeat;
+    background-color: red;
+}
+
+.samsung.layout720p #app {
+    width: 1280px;
+    height: 720px;
+    background-image: url(../img/bbc_background_720.png);
+    background-repeat: no-repeat;
+}
+
+.samsung.layout1080p #app {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../img/bbc_background_1080.png);
+    background-repeat: no-repeat;
+}
+
+
+/* Sample app specific styles */
+#title {
+    font-size: 150%;
+    line-height: 120%;
+    display: block;
+    text-align: center;
+    margin: 2% auto 0 auto;
+}
+
+.button {
+    background-color: #DCDCDC;
+    display: block;
+    text-align: center;
+    max-width: 600px;
+    padding: 8px;
+    margin: 8px auto 0 auto;
+    color: #000000;
+}
+
+.buttonFocussed {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.buttonFocussed.menuendpoint {
+    background-color: #FFD700;
+}
+
+.background-none {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+.description {
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    padding: 8px 0px;
+}
+
+#testPlayer {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 720px;
+}
+
+#playerButtons {
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #000000;
+}
+
+#playerButtons .button {
+    width: 75px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+/* Display & Visibility Helpers */
+.display-none {
+    display: none !important;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+.carouselmask {
+    overflow: hidden;
+}
+
+.carouselwidgetstrip {
+    position: relative;
+    white-space: nowrap;
+}
+
+.carouselwidgetstrip.vertical > .carouselItem {
+    display: block;
+}
+
+.carouselwidgetstrip.horizontal > .carouselItem {
+    display: inline-block;
+}
+
+#carouselComponent {
+    position: relative;
+}
+
+#carouselComponent > .carouselmask {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselComponent > .description {
+    position: static;
+}
+
+.carouselwidgetstrip > .button {
+    margin: 0;
+    width: 200px;
+    padding: 32px;
+}
+
+.carouselwidgetstrip.vertical > .button {
+    height: 200px;
+}
+
+#progressBar {
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;
+    min-height: 10px;
+    background: #070;
+}
+#progressBar_left {
+    min-height: 10px;
+    background: #700;
+}
+#progressBar_inner {
+    width: 10px;
+    min-height: 10px;
+    background: #777;
+    position: relative;
+}
+
+#maincontainer
+{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+}
+
+#menuPrincipal
+{
+    margin: 10px;
+
+}
+
+#vodFonction
+{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    top:100px;
+}
+
+#finPage
+{
+    margin: 10px;
+   height:100px;
+}
+
+#texte
+{
+    height: 300px;
+    width: 400px;
+ /*   top:200px;*/
+    text-align: center;
+}
+
+#afficherTexte
+{
+    background-color: white;
+    min-height: 100px;
+    width: 600px;
+}
+
+#controleBouton
+{
+    height:50px;
+    text-align: center;
+}
+
+.boutonControle
+{
+    display: inline-block;
+    float: left;
+    width:50px;
+    text-align: center;
+    margin: 4px;
+}
+
+#themeConteneur
+{
+    height: 20%; /*200px;*/
+    background-color: green;
+}
+
+#themeComponentVod
+{
+    max-height:70px;
+    width: 600px;/*600px;*/
+    /*top:30%;*/
+}
+
+#videoComponentVod
+{
+    width: 600px;
+    margin: 5px;
+}
+
+#boutonComponentVod
+{
+    max-height: 50px;
+    width: 600px;
+    margin: 5px;
+    margin-top: 20px;
+    background-color: green;
+    text-align: center;
+}
+
+#menuVod
+{
+    height: 700px;
+/*    min-height: 400px;
+    max-height: 600px;*/
+    width: 800px;
+ /*   top: 50%;*/
+
+}
+
+.menuHorizontalVod
+{
+    display: inline-block;
+    margin: 5px;
+    float: left;
+    width: 50%;
+}
+.menuVerticalVod
+ {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    width: 50%;
+ }
+.itemThemeFormatter
+{
+    max-width: 150px;
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.itemVideoFormatter
+{
+   max-height: 200px;
+    height: 150px;
+    max-width: 250px;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: orange;
+}
+.themeFocus
+{
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 2px;
+}
+.videoFocus
+{
+    max-height: 250px;
+    height: 200px;
+    width: 300px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+}
+.imageVideoFocus
+{
+    width: 300px;
+    height: 200px;
+}
+
+#menuVerticalVod2, #menuVerticalVod
+{
+    border-radius: 2px;
+    text-align: center;
+    
+}
+
+#infoComponent
+{
+    height: 500px;
+    min-height: 400px;
+    width: 400px;
+}
+ #texteVod
+ {
+    height: 500px;
+    min-height: 400px;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+    background-color: black;
+ }
+#playerComponentVod
+{
+  /*  height: 500px;
+    width: 400px;
+    background-color: orange;
+     mettre oranee*/
+}
+
+#video
+{
+    background-color: yellow;
+    border-radius: 2px;
+}

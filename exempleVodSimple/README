@@ -1,0 +1,12 @@
+application de VoD
+1. Cahier de charge
+Il s'agit de mettre en place une application de vidéo à la demande
+
+2. Fonctionnalites
+->voir la liste des videos
+->selectionner une video
+->voir les details d'une video
+
+3. Architecture de l'application
+->Le fichier index.js sert de point d'entree à l'application
+

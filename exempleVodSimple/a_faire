@@ -1,0 +1,28 @@
+dazns l'application, on aura
+->un menu d'accueil 
+	->pour regarder en direct les chaines
+		->on utilise alors une grille pour afficher les chaines suivants leurs thematique
+	->pour faire du chat video (a completer avec le webRTC de oury)
+	->pour faire de la Video on Demand
+		->on utilisera une grille pour afficher les categories
+		->puis une grille pour afficher les videos de chaque categorie
+	->un bouton Aide
+	->un bouton A propos
+	->un bouton Quitter
+
+Note
+	->Pour chaque fonctionnalite, on aura
+		->le bouton Aide
+		->le bouton Quitter
+		->le bouton Retour
+
+Objectif pour le samdi
+->realiser le PV
+->faire 2h sur le guide TAL
+->faire 2h sur le guide HbbTV
+->finir l'application
+->commencer webRTC
+->appeler issa , mounass et ndiaga fall
+->description de l'appli agricol
+->commencer kannel
+->commencer le site de robotech
