@@ -79,7 +79,7 @@ echo $antie->getRootHtmlTag($device_configuration_decoded);
         var require = {
             baseUrl: "./",
             paths: {
-                <?php echo $application_id; ?>: '.',
+                <?php echo $application_id; ?>: './',
                 antie : "antie/static/script"
             },
             priority: [],
